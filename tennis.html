@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AceCoach - Your AI-Powered Tennis Coach on iOS. Improve your game with personalized coaching powered by artificial intelligence.">
+    <title>AceCoach - AI-Powered Tennis Coach</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('tennis_background.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .features-section {
+            background: white;
+            padding: 60px 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 0 20px 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .tennis-ball-o {
+            display: inline-block;
+            width: 0.7em;
+            height: 0.7em;
+            background-color: #cddc39; /* Tennis ball yellow-green */
+            border-radius: 50%;
+            position: relative;
+            top: -0.02em;
+            border: 0.07em solid rgba(255, 255, 255, 0.7);
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+            vertical-align: middle;
+        }
+
+        .tagline {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .feature p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .app-store-badge {
+            display: inline-block;
+            background: #000;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .app-store-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .coming-soon {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #1d1d1f;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        footer a:hover {
+            border-bottom-color: white;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .tagline {
+                font-size: 1.2rem;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <header class="container">
+            <h1>AceC<span class="tennis-ball-o"></span>ach</h1>
+            <p class="tagline">Your AI-Powered Tennis Coach on iOS</p>
+        </header>
+        <div class="cta">
+            <div class="coming-soon">Coming Soon to the App Store</div>
+        </div>
+    </div>
+
+    <div class="features-section">
+        <div class="container">
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered Analysis</h3>
+                    <p>Get intelligent insights and personalized feedback powered by advanced artificial intelligence.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h3>Native iOS App</h3>
+                    <p>Designed exclusively for iPhone and iPad with a beautiful, intuitive interface.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📈</div>
+                    <h3>Track Your Progress</h3>
+                    <p>Monitor your improvement over time with detailed analytics and performance metrics.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 OakLife Digital Inc. All rights reserved.</p>
+        <p style="margin-top: 10px;">
+            <a href="privacy.html">Privacy Policy</a>
+        </p>
+    </footer>
+</body>
+</html>
+    </div>
+</body>
+</html>
