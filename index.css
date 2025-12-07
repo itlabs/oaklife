@@ -1,0 +1,298 @@
+/* Oaklife Digital Inc. - Modern Corporate Design */
+:root {
+    --bg-color: #0d1117;
+    --card-bg: #161b22;
+    --text-primary: #f0f6fc;
+    --text-secondary: #8b949e;
+    --accent-primary: #238636;
+    /* Green accent */
+    --accent-secondary: #1f6feb;
+    /* Blue accent */
+    --accent-gradient: linear-gradient(135deg, #238636 0%, #1f6feb 100%);
+    --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Layout Utilities */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+/* Header */
+header {
+    padding: 30px 0;
+    background: rgba(13, 17, 23, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--text-primary);
+}
+
+.brand {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+.brand span {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding-top: 60px;
+    /* Offset for header */
+}
+
+/* Background glow effect */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(31, 111, 235, 0.15) 0%, rgba(13, 17, 23, 0) 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    /* Big impact */
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -0.03em;
+}
+
+.hero-bg {
+    background-image: linear-gradient(rgba(13, 17, 23, 0.8), rgba(13, 17, 23, 0.9)), url('tennis_background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero .gradient-text {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+/* Products Section */
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 40px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.product-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    text-align: left;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(31, 111, 235, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.product-card h3 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.product-card .tag {
+    display: inline-block;
+    background: rgba(35, 134, 54, 0.2);
+    color: #3fb950;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.product-card p {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    font-size: 1.125rem;
+}
+
+.product-features li {
+    display: flex;
+    align-items: center;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.product-features li::before {
+    content: '→';
+    color: var(--accent-secondary);
+    margin-right: 12px;
+    font-weight: bold;
+}
+
+.product-link {
+    display: inline-block;
+    margin-top: 24px;
+    color: var(--accent-secondary);
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.product-link:hover {
+    text-decoration: underline;
+}
+
+/* Technology Section */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.tech-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    transition: background 0.2s ease;
+}
+
+.tech-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.tech-item h4 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Footer & Company Info */
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 60px 0;
+    margin-top: 80px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-info p {
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.copyright {
+    margin-top: 40px;
+    font-size: 0.875rem;
+    color: #484f58;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.125rem;
+    }
+
+    .products-grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+}
